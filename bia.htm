@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ana chocolatier </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #fff5e1;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ffcc80;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .container {
+            margin: 20px auto;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #d2691e;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        img {
+            width: 80px;
+            height: auto;
+            border-radius: 10px;
+            margin-right: 10px;
+        }
+        .pedido {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff6600;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .pedido:hover {
+            background-color: #cc5500;
+        }
+    </style>
+</head>
+<body>
+    <header>  𝒶𝓃𝒶 𝒸𝒽𝑜𝒸𝑜𝓁𝒶𝓉𝒾𝑒𝓇 </header>
+    <div class="container">
+        <h2>Sabores de Recheio</h2>
+        <ul>
+            <li><img src="brigadeiro.jpg" alt="Ovo de Páscoa de Brigadeiro"> Brigadeiro</li>
+            <li><img src="ninho com nutela.jpg" alt="Ovo de Páscoa de Ninho com Nutella"> Ninho com Nutella</li>
+            <li><img src="ninho com morango.jpg" alt="Ovo de Páscoa de Ninho com Morango"> Ninho com Morango</li>
+            <li><img src="browni.jpg" alt="Ovo de Páscoa de Brownie"> Brownie</li>
+        </ul>
+        <h2>Cascas Disponíveis</h2>
+        <ul>
+            <li><img src="ao_leite.jpg" alt="Ovo de chocolate ao leite"> Ao Leite</li>
+            <li><img src="branco.jpg" alt="Ovo de chocolate branco"> Branco</li>
+        </ul>
+        <h2>Tamanhos e Preços</h2>
+        <ul>
+            <li>150g - R$40,00</li>
+            <li>250g - R$60,00</li>
+            <li>350g - R$75,00</li>
+        </ul>
+        <button class="pedido" onclick="fazerPedido()">Fazer Pedido no WhatsApp</button>
+    </div>
+
+    <script>
+        function fazerPedido() {
+            let numero = "+5581984762499"; // Substitua pelo número correto
+            let mensagem = encodeURIComponent("Olá, gostaria de fazer um pedido de Ovo de Páscoa!");
+            window.location.href = `https://wa.me/${numero}?text=${mensagem}`;
+        }
+    </script>
+</body>
+</html>
